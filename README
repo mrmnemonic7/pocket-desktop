@@ -1,0 +1,17 @@
+Pocket Desktop is a customised Live Linux system based on Ubuntu. 64-bit only.
+
+It's designed with online safety, security and privacy in mind. Derived from a previous work to which this developer made and inspired by Tails but meant to be a more everyday usable equivalant this project hopes to be a handy, portable Linux desktop you can carry in your pocket.
+
+Yep, that's it.
+
+* Partition a USB stick into two FAT32 partitions 1) storage 2) system. "storage" could be 2-4G whereas "system" should be at least 4G.
+* Insert USB stick. Double check "storage" and "system" partitions exist.
+* Download ubuntu-20.04-desktop-amd64.iso
+* Place it in the parent directory outside of pocket-desktop
+* Run #sudo ./make-base.sh
+* Modify update_disk.sh to use your actual Linux account name eg: `whoami`
+* Run #sudo ./update_disk.sh
+
+This will now run on UEFI systems. To run on legacy boot options, run:
+> grub-install --force --removable --boot-directory=(path to USB)/boot --efi-directory=(path to USB}/EFI/BOOT /dev/(usb device)
+Making sure "system" partition is flagged "boot" in fdisk, cfdisk or gdisk.
