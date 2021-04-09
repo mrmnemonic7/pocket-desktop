@@ -4,6 +4,8 @@ It's designed with online safety, security and privacy in mind. Derived from a p
 
 Yep, that's it.
 
+It is recommended to also grab the linux-privacy repository, which should also be sitting in the parent folder, for the Tor and privacy scripts to work.
+
 * Partition a USB stick into two FAT32 partitions 1) storage 2) system. "storage" could be 2-4G whereas "system" should be at least 4G.
 * Insert USB stick. Double check "storage" and "system" partitions exist.
 * Download ubuntu-20.04-desktop-amd64.iso
